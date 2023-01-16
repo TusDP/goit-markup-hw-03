@@ -1,5 +1,45 @@
 /* General settings */
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 :root {
   --primary-title-color: #2e2f42;
   --secondary-title-color: #ffffff;
@@ -24,37 +64,21 @@ body {
   background-color: var(--main-background-color);
 }
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-address {
-  font-style: normal;
-  color: inherit;
-}
-
-ul {
-  list-style-type: none;
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 /* MAIN PAGE styles */
 
 /* 1. Header */
 /* 1.1 The logo */
+
+.header {
+  background-color: var(--main-background-color);
+  border-bottom: 1px solid #E7E9FC;
+}
 
 .logo-header {
   font-family: "Raleway", sans-serif;
@@ -110,6 +134,7 @@ ul {
 }
 
 .hero-button {
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
@@ -126,6 +151,7 @@ ul {
 /* 2.2 Competencies & our features */
 
 .section-subtitle {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -141,6 +167,8 @@ ul {
 /* 2.3 Occupation & our team */
 
 .section-title {
+  margin-bottom: 72px;
+  text-align: center;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -152,7 +180,7 @@ ul {
   background-color: var(--alternative-background-color);
 }
 
-.section-list li {
+.team-list li {
   background-color: var(--main-background-color);
 }
 
@@ -197,4 +225,126 @@ ul {
 .filter-btn:focus {
   color: var(--secondary-filter-btn-textcolor);
   background-color: var(--secondary-filter-btn-color);
+}
+
+/* FLEX styles */
+
+.header-container {
+  display: flex;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.logo-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+}
+
+.navigation-list {
+  display: flex;
+  gap: 40px;
+  margin-left: 76px;
+}
+
+.navigation-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.contacts {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-adr {
+  margin-left: auto;
+}
+
+/* Hero */
+
+
+
+.hero-title {
+  max-width: 498px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.hero-button {
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+}
+  
+
+.hero {
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
+/* features */
+
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+
+}
+
+/* occupation */
+.occupation-list {
+  display: flex;
+  gap: 24px;
+}
+
+.occupation {
+  padding-bottom: 120px;
+}
+
+/* our team */
+.team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.teamcard-info {
+  text-align: center;
+  padding: 32px 16px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* footer */
+
+.footer-text {
+  margin-top: 12px;
+  max-width: 264px;
+}
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
