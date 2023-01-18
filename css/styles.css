@@ -60,6 +60,8 @@ img {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--primary-text-color);
   background-color: var(--main-background-color);
 }
@@ -77,10 +79,17 @@ body {
 
 .header {
   background-color: var(--main-background-color);
-  border-bottom: 1px solid #E7E9FC;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
 }
 
 .logo-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -95,10 +104,22 @@ body {
 
 /* 1.2 Navigation between site pages*/
 
+.main-nav {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+  margin-left: 76px;
+  gap: 40px;
+}
+
 .navigation-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--primary-title-color);
 }
 
@@ -109,9 +130,19 @@ body {
 
 /* 1.3 Address mail & tel */
 
+.contacts {
+  display: flex;
+  gap: 40px;
+}
+
+.header-adr {
+  margin-left: auto;
+}
+
 .contact-link {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .contact-link:hover,
@@ -123,23 +154,34 @@ body {
 /* 2.1 The slogan & order sevice */
 
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+
+  text-align: center;
   background-color: var(--secondary-background-color);
 }
 
 .hero-title {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  max-width: 498px;
+
   color: var(--secondary-title-color);
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 0.02em;
 }
 
 .hero-button {
+  padding: 16px 32px;
+
   font-weight: 500;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: var(--primary-btn-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
 }
 
 .hero-button:hover,
@@ -150,33 +192,48 @@ body {
 
 /* 2.2 Competencies & our features */
 
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
 .section-subtitle {
   margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--primary-title-color);
-}
-
-.section-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 /* 2.3 Occupation & our team */
 
+.occupation {
+  padding-bottom: 120px;
+}
+
+.occupation-list {
+  display: flex;
+  gap: 24px;
+}
+
 .section-title {
   margin-bottom: 72px;
-  text-align: center;
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.02em;
+  text-align: center;
   text-transform: capitalize;
   color: var(--primary-title-color);
 }
 
 .team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   background-color: var(--alternative-background-color);
 }
 
@@ -184,16 +241,28 @@ body {
   background-color: var(--main-background-color);
 }
 
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.teamcard-info {
+  padding: 32px 16px;
+
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
 /* 3. Footer */
 
 .footer {
-  background-color: var(--secondary-background-color);
-}
+  padding-top: 100px;
+  padding-bottom: 100px;
 
-.footer p {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+  background-color: var(--secondary-background-color);
 }
 
 .logo-footer {
@@ -205,19 +274,42 @@ body {
   color: #f4f4fd;
 }
 
+.footer-text {
+  margin-top: 12px;
+  max-width: 264px;
+
+  color: var(--secondary-text-color);
+}
+
 /* PORTFOLIO styles */
+
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 
 /* 1. Navigation filter */
 /* 1.1 Select buttons */
 
+.filter-list {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 72px;
+  justify-content: center;
+}
+
 .filter-btn {
+  display: flex;
+  padding: 12px 24px;
+
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--primary-filter-btn-textcolor);
   background-color: var(--primary-filter-btn-color);
   border-color: #e7e9fc;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -227,124 +319,22 @@ body {
   background-color: var(--secondary-filter-btn-color);
 }
 
-/* FLEX styles */
+/*1.2 Select menu */
 
-.header-container {
+.select-menu {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 
-.main-nav {
-  display: flex;
+.menu-item {
+  flex-basis: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
 }
 
-.logo-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-}
-
-.navigation-list {
-  display: flex;
-  gap: 40px;
-  margin-left: 76px;
-}
-
-.navigation-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.contacts {
-  display: flex;
-  gap: 40px;
-}
-
-.contact-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.header-adr {
-  margin-left: auto;
-}
-
-/* Hero */
-
-
-
-.hero-title {
-  max-width: 498px;
-  margin: 0 auto;
-  margin-bottom: 48px;
-}
-
-.hero-button {
-  padding: 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 0;
-}
-  
-
-.hero {
-  text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
-
-/* features */
-
-.features {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.features-list {
-  display: flex;
-  gap: 24px;
-
-}
-
-/* occupation */
-.occupation-list {
-  display: flex;
-  gap: 24px;
-}
-
-.occupation {
-  padding-bottom: 120px;
-}
-
-/* our team */
-.team {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.team-list {
-  display: flex;
-  gap: 24px;
-}
-
-.teamcard-info {
-  text-align: center;
-  padding: 32px 16px;
-
-  background: #FFFFFF;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* footer */
-
-.footer-text {
-  margin-top: 12px;
-  max-width: 264px;
-}
-
-.footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.item-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
 }
